@@ -179,7 +179,7 @@ initLevel2(){
 
     var winX = 24;
     var winY = 3;  
-
+	
     this.gameBoard = new World(theWallList, winX, winY);
     this.gameBoard.createMap();
 
@@ -301,44 +301,73 @@ initLevel3(){
        
 }
 
-class World {    /* Accepts a Json Structure of where the walls are located */
+class World {
+    /* Accepts a Json Structure of where the walls are located */
     constructor (theWalls, winPosX, winPosY){
 	    this.winX = winPosX;
         this.winY = winPosY;
         this.walls = theWalls;
-    }
-    createMap() {    
-        this.addGameBoard();
-        for (var row = 1;row <= theMaxY;row++){
-            /* Create Game Board Rows */
-            this.addGameRow(row);
-            /*Create Game Board Cells */
-            for (var cell = 1;cell <= theMaxX;cell++){
-                this.addGameCell(row, cell);       
+    }
+
+    createMap() {    
+
+        this.addGameBoard();
+
+        for (var row = 1;row <= theMaxY;row++){
+
+            /* Create Game Board Rows */
+
+            this.addGameRow(row);
+
+            /*Create Game Board Cells */
+
+            for (var cell = 1;cell <= theMaxX;cell++){
+
+                this.addGameCell(row, cell);       
+
             }    
         }
         this.addWalls();
         this.addExit();
         
-    }
-    addGameBoard(){
-        var node = document.createElement("div");
-        node.id = "game-board";
-        document.getElementsByTagName("body")[0].appendChild(node);
-    }
-    addGameRow(currentRow){
-        var node = document.createElement("div");
-        node.className = "game-row";
-        node.id = "game-row-" + currentRow;
-        document.getElementById("game-board").appendChild(node);
-    }
-    addGameCell(currentRow, currentCell){
-
-        var node = document.createElement("div");
-        node.className = "game-cell";
-        node.id = "game-cell-" + currentRow + "-" + currentCell;
-        document.getElementById("game-row-" + currentRow).appendChild(node);
-    }
+    }
+
+    addGameBoard(){
+
+        var node = document.createElement("div");
+
+        node.id = "game-board";
+
+        document.getElementsByTagName("body")[0].appendChild(node);
+
+    }
+
+    addGameRow(currentRow){
+
+        var node = document.createElement("div");
+
+        node.className = "game-row";
+
+        node.id = "game-row-" + currentRow;
+
+        document.getElementById("game-board").appendChild(node);
+
+    }
+
+    addGameCell(currentRow, currentCell){
+
+
+
+        var node = document.createElement("div");
+
+        node.className = "game-cell";
+
+        node.id = "game-cell-" + currentRow + "-" + currentCell;
+
+        document.getElementById("game-row-" + currentRow).appendChild(node);
+
+    }
+
 
     addWalls(){
 	var wallNode;
@@ -358,17 +387,22 @@ class World {    /* Accepts a Json Structure of where the walls are located */
     	var exitNode = document.getElementById("game-cell-" + this.winY + "-" + this.winX);
         exitNode.className += " exit";
     }
-}
+}
+
  
-class Creature {
-    constructor(theCreatureName, thePosX, thePosY, theWinX, theWinY){
+class Creature {
+
+    constructor(theCreatureName, thePosX, thePosY, theWinX, theWinY){
+
         this.creatureName = theCreatureName;
         this.creatureClass = theCreatureName;
         this.creatureClasses = [this.creatureClass,
                                 this.creatureClass + '-left',
                                 this.creatureClass + '-right',
-                                this.creatureClass + '-back'];
-        this.startX = thePosX;        this.posX = thePosX;
+                                this.creatureClass + '-back'];
+
+        this.startX = thePosX;
+        this.posX = thePosX;
         
         this.startY = thePosY;
         this.posY = thePosY;
@@ -391,19 +425,26 @@ class Creature {
         this.delayPlayerMovement = false;
         
 	    var startPos = this.getCellNode(this.posX, this.posY);
-	    this.populateCell(startPos);
-    }
+	    this.populateCell(startPos);
+
+    }
+
     populateCell(cellNode){
         
-        cellNode.classList.add(this.creatureClass);        cellNode.classList.add('creature');
+        cellNode.classList.add(this.creatureClass);
+        cellNode.classList.add('creature');
         
-    }
+    }
+
     
 
-    getCellNode(thePosX, thePosY){
+    getCellNode(thePosX, thePosY){
+
 	//Y comes before X in the cell id name for readability, I use the standard X, Y for everything else
-        var node = document.getElementById("game-cell-" + thePosY + "-" + thePosX);
-        return node;
+        var node = document.getElementById("game-cell-" + thePosY + "-" + thePosX);
+
+        return node;
+
     }    
 
     getCurrentNode(){
@@ -412,11 +453,13 @@ class Creature {
         
         return currentPos;
     }
-        toggleDelayMovement(delayFlag){
+    
+    toggleDelayMovement(delayFlag){
         this.delayPlayerMovement = false;
         //console.log('Player Movement Delay set to ' + this.delayPlayerMovement);
     }
-    move(newX, newY){        
+    move(newX, newY){
+        
         /* Don't allow the creature to move */ 
         if (this.delayPlayerMovement == true){
             return;
@@ -453,7 +496,8 @@ class Creature {
             this.delayPlayerMovement = true;
             //console.log('Player Movement Delay set to ' + this.delayPlayerMovement);
             setTimeout(this.toggleDelayMovement.bind(this), 150);
-        }
+        }
+
     }
 
     moveUp(){
