@@ -18,26 +18,28 @@ div#game-board div.game-row div.game-cell {
 }
 
 div.wall {
-    background-image: url("wall.png");    background-size:     cover;  
+    background-image: url("images/wall.png");    background-size:     cover;  
     background-color: #cccccc;
 }
 
 div.good-guy {
-    background-image: url("good-guy.png");
+    background-image: url("images/good-guy.png");
     background-size:     cover;      background-color: #cccccc;
 }
 
 div.good-guy-left {
-    background-image: url("good-guy-left.png");
+    background-image: url("images/good-guy-left.png");
     background-size:     cover;      background-color: #cccccc;
 }
 
 div.good-guy-right {
-    background-image: url("good-guy-right.png");
+    background-image: url("images/good-guy-right.png");
     background-size:     cover;      background-color: #cccccc;
 }
 
 div.good-guy-back {
-    background-image: url("good-guy-back.png");
+    background-image: url("images/good-guy-back.png");
     background-size:     cover;      background-color: #cccccc;
-}div.bad-guy {    background-image: url("bad-guy.png");    background-size:     cover;      background-color: #cccccc;}div.bad-guy-left {    background-image: url("bad-guy-left.png");    background-size:     cover;      background-color: #cccccc;}div.bad-guy-right {    background-image: url("bad-guy-right.png");    background-size:     cover;      background-color: #cccccc;}div.bad-guy-back {    background-image: url("bad-guy-back.png");    background-size:     cover;         background-color: #cccccc;}div.bad-guy-blue {    background-image: url("bad-guy-blue.png");    background-size:     cover;      background-color: #cccccc;}div.bad-guy-blue-left {    background-image: url("bad-guy-blue-left.png");    background-size:     cover;      background-color: #cccccc;}div.bad-guy-blue-right {    background-image: url("bad-guy-blue-right.png");    background-size:     cover;      background-color: #cccccc;}div.bad-guy-blue-back {    background-image: url("bad-guy-blue-back.png");    background-size:     cover;         background-color: #cccccc;}div.exit {    background-image: url("exit.png");    background-size:     cover;      background-color: #cccccc;}
+}div.bad-guy {    
+background-image: url("images/bad-guy.png");    
+background-size:     cover;      background-color: #cccccc;}div.bad-guy-left {    background-image: url("images/bad-guy-left.png");    background-size:     cover;      background-color: #cccccc;}div.bad-guy-right {    background-image: url("images/bad-guy-right.png");    background-size:     cover;      background-color: #cccccc;}div.bad-guy-back {    background-image: url("images/bad-guy-back.png");    background-size:     cover;         background-color: #cccccc;}div.bad-guy-blue {    background-image: url("images/bad-guy-blue.png");    background-size:     cover;      background-color: #cccccc;}div.bad-guy-blue-left {    background-image: url("images/bad-guy-blue-left.png");    background-size:     cover;      background-color: #cccccc;}div.bad-guy-blue-right {    background-image: url("images/bad-guy-blue-right.png");    background-size:     cover;      background-color: #cccccc;}div.bad-guy-blue-back {    background-image: url("images/bad-guy-blue-back.png");    background-size:     cover;         background-color: #cccccc;}div.exit {    background-image: url("images/exit.png");    background-size:     cover;      background-color: #cccccc;}
