@@ -1,0 +1,43 @@
+div#level-box{    }
+div#game-board{
+    border: 6px solid lightgrey;
+    display:table;
+}
+
+div#game-board div.game-row {
+    display:table-row;
+    width:auto;
+}
+
+div#game-board div.game-row div.game-cell {
+    /*width: 34px;*/    width:22px;
+    /*height: 51px;*/        height: 34px;
+    /*outline: 1px solid; */
+    float:left;/*fix for  buggy browsers*/
+    display:table-column;
+}
+
+div.wall {
+    background-image: url("wall.png");    background-size:     cover;  
+    background-color: #cccccc;
+}
+
+div.good-guy {
+    background-image: url("good-guy.png");
+    background-size:     cover;      background-color: #cccccc;
+}
+
+div.good-guy-left {
+    background-image: url("good-guy-left.png");
+    background-size:     cover;      background-color: #cccccc;
+}
+
+div.good-guy-right {
+    background-image: url("good-guy-right.png");
+    background-size:     cover;      background-color: #cccccc;
+}
+
+div.good-guy-back {
+    background-image: url("good-guy-back.png");
+    background-size:     cover;      background-color: #cccccc;
+}div.bad-guy {    background-image: url("bad-guy.png");    background-size:     cover;      background-color: #cccccc;}div.bad-guy-left {    background-image: url("bad-guy-left.png");    background-size:     cover;      background-color: #cccccc;}div.bad-guy-right {    background-image: url("bad-guy-right.png");    background-size:     cover;      background-color: #cccccc;}div.bad-guy-back {    background-image: url("bad-guy-back.png");    background-size:     cover;         background-color: #cccccc;}div.bad-guy-blue {    background-image: url("bad-guy-blue.png");    background-size:     cover;      background-color: #cccccc;}div.bad-guy-blue-left {    background-image: url("bad-guy-blue-left.png");    background-size:     cover;      background-color: #cccccc;}div.bad-guy-blue-right {    background-image: url("bad-guy-blue-right.png");    background-size:     cover;      background-color: #cccccc;}div.bad-guy-blue-back {    background-image: url("bad-guy-blue-back.png");    background-size:     cover;         background-color: #cccccc;}div.exit {    background-image: url("exit.png");    background-size:     cover;      background-color: #cccccc;}
