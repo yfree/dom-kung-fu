@@ -1,4 +1,6 @@
-
+div, html, button {
+-webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
 div#level-box{
     
 }
@@ -173,6 +175,7 @@ background: url(images/arrow-right.png);
 }
 
 .nav-button {
+touch-action: manipulation;
 height:50px;
 width:50px;
 background-repeat: no-repeat;
