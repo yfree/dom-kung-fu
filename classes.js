@@ -338,7 +338,7 @@ class World {
 
         node.id = "game-board";
 
-        document.getElementsByTagName("body")[0].appendChild(node);
+        document.getElementById("board-wrapper").appendChild(node);
 
     }
 

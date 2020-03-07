@@ -1,11 +1,36 @@
-
 Game = new LevelController();
-        Game.initLevel1();
+Game.initLevel1();
 
-        //Keyboard event bindings
-        window.addEventListener('keydown', goodGuyMovement, false);
+//Keyboard event bindings
+window.addEventListener('keydown', goodGuyMovement, false);
 
-   function goodGuyMovement(event) {
+//Button event handlers
+upButton = document.getElementById("up-button");
+downButton = document.getElementById("down-button");
+leftButton = document.getElementById("left-button");
+rightButton = document.getElementById("right-button"); 
+        
+upButton.onclick = function() {
+    Game.goodGuy.moveUp();
+
+    };
+
+downButton.onclick = function() {
+    Game.goodGuy.moveDown();
+
+    };
+
+leftButton.onclick = function() {
+    Game.goodGuy.moveLeft();
+
+    };
+
+rightButton.onclick = function() {
+    Game.goodGuy.moveRight();
+
+    };
+    
+function goodGuyMovement(event) {
 
         var code = event.keyCode;
         
